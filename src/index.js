@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 import './style.css';
 import completedStatus from './script';
 // eslint-disable-next-line import/no-cycle
@@ -35,7 +36,6 @@ const displayTasks = () => {
       input.setAttribute('class', 'check-box');
       input.id = each.id;
       input.checked = each.completed;
-      // eslint-disable-next-line no-loop-func
       input.addEventListener('change', () => {
         completedStatus(each, taskList);
       });
@@ -71,7 +71,7 @@ const displayTasks = () => {
         button.style.display = 'none';
         trash.style.display = 'inline';
       });
-      // eslint-disable-next-line no-loop-func
+
       trash.addEventListener('mousedown', () => {
         // eslint-disable-next-line no-use-before-define
         removeTask(taskList, i);
